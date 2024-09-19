@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Converter</title>
+</head>
+<body>
+    <script>
+        // prompt to ask the grade
+        let points= prompt("Enter a grade between 1 to 100: ");
+        points = parseInt(points);
+        
+        
+        // convert the point to letter grade using if staement
+        let grade = "";
+        if (points >= 91) {
+            grade = "A";
+        } 
+        else if (points >= 81) {
+            grade = "B";
+        } 
+        else if (points >= 71) {
+            grade = "C";
+        }
+        else if (points >= 61) {
+            grade = "D";
+        }
+        else {
+            grade = "F";
+            }
+
+            let gradeSwitch = "";
+        switch (true) {
+            case (points >= 91):
+                gradeSwitch = "A";
+                break;
+            case (points >= 81):
+                gradeSwitch = "B";
+                break;
+            case (points >= 71):
+                gradeSwitch = "C";
+                break;
+            case (points >= 61):
+                gradeSwitch = "D";
+                break;
+            default:
+                gradeSwitch = "F";
+                break;
+        }
+        
+        // Display the grade on the web page
+        document.body.innerText = `The grade is (a) Grade: ${grade}, (b): ${gradeSwitch}`;
+    </script>
+</body>
+</html>

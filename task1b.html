@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App</title>
+</head>
+<body>
+    <script>
+        //prompt to enter a number
+        let quantity = prompt("Enter a quantity number: ");
+        quality = parseFloat(quantity);
+
+        // prompt to enter a percentage
+        let percentage = prompt("Enter a percentage: ");
+        percentage = parseFloat(percentage);
+
+        //calculate the result
+        let result = (quantity * percentage)/ 100;
+
+
+        document.body.innerHTML += `The Quantity number of the item: ${quantity}<br> ${percentage}% of Quality, ${quantity}, is ${result}`;
+    </script>
+</body>
+</html>

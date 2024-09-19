@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting Example</title>
+</head>
+<body>
+    <div id="hoisting"></div>
+
+    <script>
+        
+        // Hoisting is a behaviour in java script where the declaration of variable and functions are moving to the top.
+        // a) Hoisting in the context of a function:
+        //   Function declarations are hoisted to the top of their scope, meaning you can call the function before it is defined in the code.
+        
+        // b) Hoisting in the context of a variable:
+        //   Variable declarations (using `var`) are also hoisted, but only the declaration is hoisted, not the initialization. 
+        //  If you use a variable before it's initialized, it will be `undefined`.
+      
+
+        // Coded Example of Hoisting:
+
+        // Example a) Function Hoisting
+        hoistedFunction(); // This works because the function declaration is hoisted
+
+        function hoistedFunction() {
+            console.log("This function was called before it was declared!");
+        }
+
+        // Example b) Variable Hoisting
+        console.log(hoistedVar); // This logs 'undefined' because the variable is hoisted but not initialized
+
+        var hoistedVar = "This is a hoisted variable";
+
+        // Variable declaration is hoisted, but the initialization ("This is a hoisted variable") happens at the point it is defined.
+        console.log(hoistedVar); // This logs the initialized value: "This is a hoisted variable"
+
+        
+        //How ECMA Standards Resolved Hoisting:
+
+        //With the introduction of `let` and `const` in ES6, hoisting behavior changed for variables. 
+       // Variables declared with `let` and `const` are also hoisted, but they are not initialized until the code execution reaches their declaration.
+       // This results in a "temporal dead zone" (TDZ), meaning you cannot access these variables before their declaration in the code.
+        
+        //Example of `let` and `const` resolving hoisting issues:
+
+       // console.log(letVar); // ReferenceError: Cannot access 'letVar' before initialization
+        //let letVar = "This is a let variable";
+
+        //console.log(constVar); // ReferenceError: Cannot access 'constVar' before initialization
+        //const constVar = "This is a const variable";
+
+       // In the case of functions, the behavior remains the same for function declarations. However, function expressions (assigned to variables) are not hoisted in the same way. 
+       // If you try to call a function expression before its declaration, you'll get an error.
+        
+       // Example:
+
+        //hoistedFuncExpression(); // TypeError: hoistedFuncExpression is not a function
+        // var hoistedFuncExpression = function() {
+        //    console.log("This is a function expression.");
+        //  };
+
+        
+    </script>
+</body>
+</html>

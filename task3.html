@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Prompt the user for inputs
+        const professor = prompt("Name the professor: ");
+        const userLine = prompt("Enter the line to write: ");
+        let numberOFTimes = prompt("Enter the number of times to write the line: ");
+        
+        // Convert the number of times to integers
+        numberOFTimes = parseInt(numberOFTimes);
+        
+    
+            // on Console the line multiple times
+        for (let i = 1; i <= numberOFTimes; i++) {
+            console.log(`${i}: ${userLine}`);
+        }
+        
+    </script>
+</body>
+</html>
+
